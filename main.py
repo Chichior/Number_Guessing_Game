@@ -37,8 +37,11 @@ def player_guesses_number():
         if win:
             print(f"You have guessed {player_guess}. That is correct! YOU WIN!!!!")
             break
-        else:   
-            print(f"You have guessed {player_guess}. That is incorrect.")
+        else:
+            if player_guess < the_number:   
+                print(f"You have guessed {player_guess}. That is too low.")
+            elif player_guess > the_number:
+                print(f"You have guessed {player_guess}. That is too high.")
 
     if player_guess != the_number:
         print(f"You lose! The correct number was {the_number}.")
